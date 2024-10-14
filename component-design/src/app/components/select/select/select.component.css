@@ -1,0 +1,139 @@
+.zn-select {
+    @apply w-full text-base flex items-center justify-between rounded-md box-border border border-grey-100
+      focus-within:outline focus-within:outline-offset-[-1px] focus-within:outline-blue-300 focus-within:outline-1;
+  }
+  
+  .zn-select-textonly {
+    @apply bg-transparent border-0 text-blue-500;
+  }
+  
+  .zn-select-filter {
+    @apply border-0 focus-within:bg-blue-100 hover:bg-blue-50 px-8 shadow-default;
+  }
+  
+  .zn-select.zn-select-xs {
+    @apply h-[28px] text-sm;
+  }
+  .zn-select.zn-select-sm {
+    @apply h-[32px] text-sm;
+  }
+  .zn-select.zn-select-md {
+    @apply h-[44px];
+  }
+  
+  .zn-select.zn-error {
+    @apply outline outline-offset-[-1px] outline-error-100 outline-1;
+  }
+  
+  .zn-select input {
+    @apply bg-[transparent] text-blue-900 h-full w-full focus-within:outline-0 appearance-none cursor-pointer;
+  }
+  
+  .zn-select .rc-select-selection-search {
+    @apply w-full h-full;
+  }
+  .zn-select input[type='search']::-webkit-search-decoration,
+  .zn-select input[type='search']::-webkit-search-cancel-button,
+  .zn-select input[type='search']::-webkit-search-results-button,
+  .zn-select input[type='search']::-webkit-search-results-decoration {
+    display: none;
+  }
+  
+  .zn-select .rc-select-selector {
+    @apply w-full h-full relative overflow-hidden pl-8;
+  }
+  
+  .zn-select .rc-select-selector > .rc-select-selection-item {
+    @apply whitespace-nowrap;
+  }
+  
+  .zn-select-disabled {
+    @apply cursor-not-allowed;
+  }
+  
+  .rc-select-dropdown {
+    @apply w-full p-12 rounded-md bg-white shadow-md z-20 pointer-events-auto;
+  }
+  
+  .rc-select-dropdown.rc-select-dropdown-hidden {
+    @apply hidden;
+  }
+  
+  .rc-select-item-option {
+    @apply hover:bg-blue-50 p-8 rounded-md text-base grid gap-4 grid-cols-[1fr_auto] justify-center cursor-pointer;
+    &.rc-select-item-option-active {
+      @apply bg-blue-50;
+    }
+  
+    &.rc-select-item-option-disabled {
+      @apply hover:bg-transparent cursor-not-allowed text-grey-600;
+    }
+  }
+  
+  .rc-select-selection-item {
+    @apply grid w-fit grid-flow-col gap-8 items-center;
+  }
+  
+  .rc-select-selection-item,
+  .rc-select-selection-placeholder {
+    @apply pointer-events-none absolute top-1/2 -translate-y-1/2 left-12;
+  }
+  
+  .rc-select-item-option-content {
+    @apply grid w-fit grid-flow-col gap-8 items-center;
+  }
+  
+  /* Multiple */
+  
+  .rc-select-selection-item-content {
+    @apply grid w-fit grid-flow-col gap-8 items-center;
+  }
+  
+  .rc-select-selection-overflow {
+    @apply grid grid-flow-col gap-8 w-full h-full justify-start items-center cursor-pointer;
+  }
+  .rc-select-selection-overflow .rc-select-selection-search {
+    @apply hidden;
+  }
+  
+  .rc-select-selection-overflow-item {
+    @apply h-full grid items-center;
+  }
+  
+  .rc-select-selection-overflow-item .rc-select-selection-item {
+    @apply static transform-none grid grid-flow-col gap-4 items-center justify-center h-min px-[6px] py-2 rounded-sm bg-blue-50 text-sm text-blue-500;
+  }
+  
+  .rc-select-selection-item-remove {
+    @apply z-20 pointer-events-auto cursor-pointer;
+  }
+  
+  .rc-select-selection-overflow-item-rest .rc-select-selection-item-content {
+    @apply whitespace-nowrap;
+  }
+  
+  /* Multiple end */
+  .rc-select-clear {
+    @apply mr-8 z-10 cursor-pointer text-grey-900;
+  }
+  .rc-select-arrow {
+    @apply mr-8 text-grey-900;
+  }
+  
+  /* Scrollbar */
+  
+  .rc-virtual-list-scrollbar {
+    /* padding amount, right is defined inline through react-virtualized */
+    right: -12px !important;
+  }
+  
+  .rc-virtual-list-scrollbar-thumb {
+    @apply w-[7px] bg-grey-500 opacity-75;
+  }
+  
+  /* Group */
+  
+  .rc-select-item-group {
+    @apply text-sm text-grey-900 py-8;
+  }
+  

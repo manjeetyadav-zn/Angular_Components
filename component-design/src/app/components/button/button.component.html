@@ -1,0 +1,8 @@
+<button
+  [class]="computeClass()"
+  [ngClass]="{ disabled: disabled, error: error }"
+  (click)="onClickEvent($event)"
+  disabled="disabled"
+>
+  <ng-content></ng-content>
+</button>
